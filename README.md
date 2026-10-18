@@ -2,7 +2,7 @@
 
 NAASL is a comprehensive platform for managing and exploring horse pedigree data, competitions, and related information.
 
-##  Documentation
+## 📚 Documentation
 
 This repository contains multiple applications and utilities. Start here:
 
@@ -14,7 +14,7 @@ This repository contains multiple applications and utilities. Start here:
 
 - **[apps/QUICK_START.md](./apps/QUICK_START.md)** - Quick start guide for running the applications
 
-##  Project Structure
+## 🏗️ Project Structure
 
 ```
 naasl/
@@ -62,7 +62,7 @@ naasl/
 
 For more detailed instructions, see [QUICK_START.md](./apps/QUICK_START.md).
 
-##  Getting Started as a Developer
+## 📖 Getting Started as a Developer
 
 If you're new to the project:
 
@@ -84,7 +84,7 @@ If you're new to the project:
    - Make your changes
    - Submit a pull request
 
-##  Applications
+## 🛠️ Applications
 
 ### Backend (`apps/naasl-backend/`)
 
@@ -110,7 +110,7 @@ Next.js React application providing:
 
 See [Frontend README](./apps/naasl-frontend/README.md) for setup and development.
 
-##  Scripts (`scripts/`)
+## 📜 Scripts (`scripts/`)
 
 Utility scripts for:
 - **Image Cleaning** - Processing and organizing horse images
@@ -121,7 +121,7 @@ Utility scripts for:
 
 See [Scripts README](./scripts/README.md) for usage and documentation.
 
-##  Development
+## 🔧 Development
 
 ### Common Tasks
 
@@ -165,7 +165,7 @@ See [DEVELOPMENT_GUIDE.md](./DEVELOPMENT_GUIDE.md) for complete workflow.
 4. Test thoroughly
 5. Submit a pull request
 
-##  Links
+## 🔗 Links
 
 - **Development Guide:** [DEVELOPMENT_GUIDE.md](./DEVELOPMENT_GUIDE.md)
 - **Backend Docs:** [apps/naasl-backend/README.md](./apps/naasl-backend/README.md)
@@ -177,7 +177,7 @@ See [DEVELOPMENT_GUIDE.md](./DEVELOPMENT_GUIDE.md) for complete workflow.
 
 [Add license information here]
 
-##  Support
+## 🤝 Support
 
 For questions or issues:
 - Check the documentation in each directory

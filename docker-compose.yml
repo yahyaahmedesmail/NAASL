@@ -1,0 +1,42 @@
+services:
+  backend:
+    build:
+      context: ./apps/naasl-backend
+      dockerfile: Dockerfile
+    env_file: ./apps/naasl-backend/.env
+    restart: unless-stopped
+    # Allows the container to reach the host's PostgreSQL on port 15432
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - naasl-net
+
+  frontend:
+    build:
+      context: ./apps/naasl-frontend
+      dockerfile: Dockerfile
+      args:
+        # Baked in at build time — set this in the root .env file
+        NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL}
+    restart: unless-stopped
+    networks:
+      - naasl-net
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    depends_on:
+      - backend
+      - frontend
+    restart: unless-stopped
+    networks:
+      - naasl-net
+
+networks:
+  naasl-net:
+    driver: bridge
